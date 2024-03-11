@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de flexbox</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <nav class="menu-vertical"> <!-- Menu de navegaçao para redirecionar links para outras páginas.
+        A class no nav foi para poder estilizar a barra de navegação em linha ou coluna.-->
+        <a href="#">Home</a> <!-- Aqui a tag a é para colocar o link de redirecionamento
+        e o # é o lugar que você inclui o link. O texto é colocado entre a abertura e fechamento da tag
+        As tags abaixo também segue o fluxo de redirecionamento para um background posterior.-->
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </nav> 
+    <div class="container">
+    <!--aqui temos a div Pai com a class container padrão.Ela vai agrupar todas as demais
+    divs, que serão chamadas de filhos. É aqui que se aplica o display:flex. Os filhos do 
+    container se tornam flexiveis e se adaptam ao "pai"container-->
+    <div class="sidebar">sidebar</div>
+    <div class="header">header</div>
+    <div class="content">content</div>
+    <!-- Essas divs sao os filhos da div container. Cada parte do site (sidebar: barra lateral
+    header: cabeçalho e content: conteudo) estao em divs separadas para poder estilizar
+    cada um com seu jeito. Perceba que a div container tem seu fechamento la no final para englobar
+    todos os filhos dentro. Podes fazer sites com apenas 2 desses itens: sidebar + content por ex-->
+
+</div> 
+
+
+</div> 
+    
+    
+    
+    
+</body>
+</html>

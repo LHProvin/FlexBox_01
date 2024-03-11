@@ -1,0 +1,56 @@
+/* Abaixo está um reset básico do CSS para tirar todas as margens e alturas da página
+antes de colocar as estilizaçoes. Isso deixa o layout limpo e resetado ( sem scroll)*/
+
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+/* A primeira coisa é aplicar o display flex no container. Automaticamente ele ordena os itens
+em linha na pagina web. A cor foi apenas para testar*/
+.container { 
+    display: flex;
+    color:white;
+    flex-direction: column; /* importante: se nao aplicar direção ela aparecerá em linha. Agora eu
+    usei o flex-direction no pai ( container) para colocar os filhos em coluna*/
+}
+
+.sidebar {
+    background-color: blue; /* Se voce não colocar uma cor nao saberá onde esta, pois
+    sem dar as dimensões do sidebar a tela entender estar 0x0*/
+    width: 100%; /* aqui estou colocando a largura do sidebar em 100% da página.*/
+    height: 70px; /* aqui estou colocando a altura do sidebar em 70px (design) 
+    Se eu colocar altura em % pode dar ruim para telas pequenas pois ela vai diminuir
+    juntamente com o sidebar. Algumas coisas precisam de alturas e larguras fixas
+    para que as telas menores nao fiquem comprometidas ou nao apareça. Se eu colocar 10%
+    vai ser em relação ao tamanho da tela.*/
+}
+
+.content {
+    background-color: black; /* mesmo esquema do sidebar*/
+}
+
+.header {
+    background-color: brown;
+}
+
+.menu-vertical {
+    display: flex; /* Primeiro passo é usar display flex para dizer aos demais compomentes 
+    que meu display é flexível. Feito isso os itens seguintes obedecerão a regra*/
+    flex-direction: column;
+}
+
+.menu-vertical a {
+    margin: 7px 0 /* Aqui vou dar distanciamento da margem no menu vertical das tags a. 
+    note que nao usei a propriedade na classe menu vertical pois alteraria os demais componentes
+    que eu nao queria no momento. O primeiro número refere do topo e abaixo e o segundo
+    refere a margem lateral. Um detalhe: se eu quiser 14px de distanciamento margem cima/baixo
+    preciso colocar 7px pois ele soma 7 de cima com 7 de baixo.
+    
+    2 - Se eu quiser usar na horizontal o display, troco para flex direction row (linha)
+    e onde altero a ordem do margim para 0 7x para dar espaçamento esquerda/direita */
+}
